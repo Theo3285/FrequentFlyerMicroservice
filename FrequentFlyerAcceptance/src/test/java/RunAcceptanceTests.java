@@ -4,7 +4,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty", "html:target/FeaturesReport"},
+        plugin = {"pretty",
+                "html:target/AcceptanceReport",
+                "json:target/AcceptanceReport.json"
+        },
         features = "src/test/resources/features/"
 )
 public class RunAcceptanceTests {
