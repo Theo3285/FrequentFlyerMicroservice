@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 public class RepositoriesConfiguration {
     @Bean
     public FrequentFlyerMemberRepository frequentFlyerMemberRepository() {
-        FrequentFlyerMemberRepository frequentFlyerMemberRepository = new InMemoryFrequentFlyerMemberRepository();
-        return frequentFlyerMemberRepository;
+        return new InMemoryFrequentFlyerMemberRepository();
     }
 }

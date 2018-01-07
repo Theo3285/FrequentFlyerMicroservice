@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 public class GatewaysConfiguration {
     @Bean
     public AuthenticationGateway authenticationGateway() {
-        AuthenticationGateway authenticationGateway = new InMemoryAuthenticationGateway();
-        return authenticationGateway;
+        return new InMemoryAuthenticationGateway();
     }
 }
