@@ -7,6 +7,7 @@ import static org.junit.Assert.assertThat;
 public class RetrieveVersion extends IntegrationSteps implements En {
 
     public RetrieveVersion() {
+        super();
         When("^the client calls /version$", () -> {
             responseEntity = restTemplate.getForEntity(createURL("/version"), String.class);
         });

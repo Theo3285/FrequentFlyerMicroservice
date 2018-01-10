@@ -13,7 +13,7 @@ public class ExceptionHandlerControllerAdvice {
 
     @ExceptionHandler(UnknownMemberException.class)
     public ResponseEntity<String> handleUnkownMemberException(UnknownMemberException ex) {
-        return new ResponseEntity<String>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<String>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(UnauthorizedMemberException.class)
